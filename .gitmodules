@@ -7,3 +7,9 @@
 [submodule "DynaMind-BasicModules"]
 	path = DynaMind-BasicModules
 	url = git@github.com:iut-ibk/DynaMind-BasicModules.git
+[submodule "P8Modules"]
+	path = P8Modules
+	url = git@github.com:iut-ibk/P8Modules.git
+[submodule "DynaMind-CityBlocks"]
+	path = DynaMind-CityBlocks
+	url = git@github.com:christianurich/DynaMind-CityBlocks.git

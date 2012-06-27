@@ -4,7 +4,7 @@ project(P8-WSC)
 
 find_package(Git REQUIRED)
 
-set(TOOLBOX DynaMind)
+set(TOOLBOX DynaMind DynaMind-Gui DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
 
 
 foreach (tool ${TOOLBOX})
@@ -18,14 +18,14 @@ foreach (tool ${TOOLBOX})
 		            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 	endif (EXISTS ${CMAKE_SOURCE_DIR}/${tool}/src)
 
-
 endforeach(${tool}) 
 
 SET(DYNAMIND_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/DynaMind/src/core) 
 SET(DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/DynaMind/src/DMToolboxes) 
 SET(DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/DynaMind/src/python-swig) 
-SET(DYNAMIND_TOOLBOX_BUILD_DIR ${DynaMind-ToolBox_BINARY_DIR}/output)
+SET(DYNAMIND_TOOLBOX_BUILD_DIR ${P8-WSC_BINARY_DIR}/output)
 
+file(MAKE_DIRECTORY ${P8-WSC_DIR}/output)
 foreach (tool ${TOOLBOX})
 	add_subdirectory(${tool})
 endforeach(${tool}) 
