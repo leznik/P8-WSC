@@ -3,13 +3,13 @@
 <DynaMindCore>
 	<Nodes>
 		<RootNode>
-			<UUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
+			<UUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
 		</RootNode>
 		<Node>
 			<ClassName value="CityBlock"/>
-			<UUID value="{06722589-a816-4edf-99a6-f91b17adc533}"/>
+			<UUID value="{401b7250-fe12-4bd0-b1f3-2b4b452e35d1}"/>
 			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
 			<parameter name="Height">
 				<![CDATA[100]]>
 			</parameter>
@@ -18,96 +18,15 @@
 			</parameter>
 		</Node>
 		<Node>
-			<ClassName value="AppendRasterAsAttribute"/>
-			<UUID value="{2463a099-69e6-4361-9a19-a5ba1a77a733}"/>
-			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
-		</Node>
-		<Node>
-			<ClassName value="AppendViewFromSystem"/>
-			<UUID value="{3096822a-54c3-4ae5-be72-ea7972535892}"/>
-			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
-			<parameter name="Inports">
-				<![CDATA[1*|*2*|*3*|*4*|*]]>
-			</parameter>
-		</Node>
-		<Node>
-			<ClassName value="ImportRasterData"/>
-			<UUID value="{46add94c-a063-422c-b32d-1b3b185f23d2}"/>
-			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
-			<parameter name="DataName">
-				<![CDATA[Elevation]]>
-			</parameter>
-			<parameter name="Filename">
-				<![CDATA[/home/c8451045/Dropbox/P8model/InputData/scotchcreek_elev.txt]]>
-			</parameter>
-			<parameter name="Flip">
-				<![CDATA[0]]>
-			</parameter>
-			<parameter name="Multiplier">
-				<![CDATA[1]]>
-			</parameter>
-		</Node>
-		<Node>
-			<ClassName value="ImportRasterData"/>
-			<UUID value="{6609cc69-4fdd-4ef8-9a1c-ab536a5c0110}"/>
-			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
-			<parameter name="DataName">
-				<![CDATA[Soil]]>
-			</parameter>
-			<parameter name="Filename">
-				<![CDATA[/home/c8451045/Dropbox/P8model/InputData/scotchcreek_soilk.txt]]>
-			</parameter>
-			<parameter name="Flip">
-				<![CDATA[0]]>
-			</parameter>
-			<parameter name="Multiplier">
-				<![CDATA[1]]>
-			</parameter>
-		</Node>
-		<Node>
-			<ClassName value="ExportToShapeFile"/>
-			<UUID value="{7c92283f-f8a8-4d29-a160-872f142e5e3b}"/>
-			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
-			<parameter name="CoordinateSystem">
-				<![CDATA[+proj=utm +zone=55 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs +towgs84=0,0,0]]>
-			</parameter>
-			<parameter name="Faces">
-				<![CDATA[1]]>
-			</parameter>
-			<parameter name="FileName">
-				<![CDATA[/tmp/cityblocks]]>
-			</parameter>
-			<parameter name="Lines">
-				<![CDATA[0]]>
-			</parameter>
-			<parameter name="Name">
-				<![CDATA[CITYBLOCK]]>
-			</parameter>
-			<parameter name="Points">
-				<![CDATA[0]]>
-			</parameter>
-			<parameter name="offsetX">
-				<![CDATA[0]]>
-			</parameter>
-			<parameter name="offsetY">
-				<![CDATA[0]]>
-			</parameter>
-		</Node>
-		<Node>
 			<ClassName value="ImportShapeFile"/>
-			<UUID value="{8ab47a18-b58b-4da2-b48e-d2346fd2fbb5}"/>
+			<UUID value="{4a324808-d506-4c7d-99b9-5ce2d59e9c88}"/>
 			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
 			<parameter name="AppendToExistingSystem">
 				<![CDATA[0]]>
 			</parameter>
 			<parameter name="FileName">
-				<![CDATA[/home/c8451045/Dropbox/P8model/InputData/CatchmentBoundary.shp]]>
+				<![CDATA[/home/heiko/P8-WSC/Data/CatchmentBoundary.shp]]>
 			</parameter>
 			<parameter name="Identifier">
 				<![CDATA[SUPERBLOCK]]>
@@ -133,14 +52,14 @@
 		</Node>
 		<Node>
 			<ClassName value="ImportRasterData"/>
-			<UUID value="{911a4248-f49f-4d8b-9aeb-1bc2dc402e3a}"/>
+			<UUID value="{703c06bc-6c1a-4f74-9c0b-a1fa293384ba}"/>
 			<Name value=""/>
-			<GroupUUID value="{faed7f9e-c0e1-4e7d-8f89-fcc054601749}"/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
 			<parameter name="DataName">
 				<![CDATA[Landuse]]>
 			</parameter>
 			<parameter name="Filename">
-				<![CDATA[/home/c8451045/Dropbox/P8model/InputData/screekluc.txt]]>
+				<![CDATA[/home/heiko/P8-WSC/Data/screekluc.txt]]>
 			</parameter>
 			<parameter name="Flip">
 				<![CDATA[0]]>
@@ -149,17 +68,98 @@
 				<![CDATA[1]]>
 			</parameter>
 		</Node>
+		<Node>
+			<ClassName value="AppendViewFromSystem"/>
+			<UUID value="{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
+			<Name value=""/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
+			<parameter name="Inports">
+				<![CDATA[1*|*2*|*3*|*4*|*]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="AppendRasterAsAttribute"/>
+			<UUID value="{99ff1860-758d-4853-a4f4-a291099568b5}"/>
+			<Name value=""/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
+		</Node>
+		<Node>
+			<ClassName value="ImportRasterData"/>
+			<UUID value="{c67abf26-f8a5-4611-90e2-6d66b743e197}"/>
+			<Name value=""/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
+			<parameter name="DataName">
+				<![CDATA[Soil]]>
+			</parameter>
+			<parameter name="Filename">
+				<![CDATA[/home/heiko/P8-WSC/Data/scotchcreek_soilk.txt]]>
+			</parameter>
+			<parameter name="Flip">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="Multiplier">
+				<![CDATA[1]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="ImportRasterData"/>
+			<UUID value="{f38fd380-a61d-4a2f-842f-d7760f6ef312}"/>
+			<Name value=""/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
+			<parameter name="DataName">
+				<![CDATA[Elevation]]>
+			</parameter>
+			<parameter name="Filename">
+				<![CDATA[/home/heiko/P8-WSC/Data/scotchcreek_elev.txt]]>
+			</parameter>
+			<parameter name="Flip">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="Multiplier">
+				<![CDATA[1]]>
+			</parameter>
+		</Node>
+		<Node>
+			<ClassName value="ExportToShapeFile"/>
+			<UUID value="{f9045b49-a93f-42c4-b171-8e1468985d82}"/>
+			<Name value=""/>
+			<GroupUUID value="{271d988c-08be-4930-9337-18153199a69e}"/>
+			<parameter name="CoordinateSystem">
+				<![CDATA[+proj=utm +zone=55 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs +towgs84=0,0,0]]>
+			</parameter>
+			<parameter name="Faces">
+				<![CDATA[1]]>
+			</parameter>
+			<parameter name="FileName">
+				<![CDATA[/tmp/cityblocks]]>
+			</parameter>
+			<parameter name="Lines">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="Name">
+				<![CDATA[CITYBLOCK]]>
+			</parameter>
+			<parameter name="Points">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="offsetX">
+				<![CDATA[0]]>
+			</parameter>
+			<parameter name="offsetY">
+				<![CDATA[0]]>
+			</parameter>
+		</Node>
 	</Nodes>
 	<Links>
 		<Link>
 			<BackLink value = "0"/>
 			<InPort>
-				<UUID value = "{2463a099-69e6-4361-9a19-a5ba1a77a733}"/>
+				<UUID value = "{99ff1860-758d-4853-a4f4-a291099568b5}"/>
 				<PortName value = "Data"/>
 				<PortType value = "0"/>
 			</InPort>
 			<OutPort>
-				<UUID value = "{06722589-a816-4edf-99a6-f91b17adc533}"/>
+				<UUID value = "{401b7250-fe12-4bd0-b1f3-2b4b452e35d1}"/>
 				<PortName value = "City"/>
 				<PortType value = "0"/>
 			</OutPort>
@@ -167,64 +167,12 @@
 		<Link>
 			<BackLink value = "0"/>
 			<InPort>
-				<UUID value = "{7c92283f-f8a8-4d29-a160-872f142e5e3b}"/>
-				<PortName value = "City"/>
-				<PortType value = "0"/>
-			</InPort>
-			<OutPort>
-				<UUID value = "{2463a099-69e6-4361-9a19-a5ba1a77a733}"/>
-				<PortName value = "Data"/>
-				<PortType value = "0"/>
-			</OutPort>
-		</Link>
-		<Link>
-			<BackLink value = "0"/>
-			<InPort>
-				<UUID value = "{06722589-a816-4edf-99a6-f91b17adc533}"/>
-				<PortName value = "City"/>
-				<PortType value = "0"/>
-			</InPort>
-			<OutPort>
-				<UUID value = "{3096822a-54c3-4ae5-be72-ea7972535892}"/>
-				<PortName value = "Combined"/>
-				<PortType value = "0"/>
-			</OutPort>
-		</Link>
-		<Link>
-			<BackLink value = "0"/>
-			<InPort>
-				<UUID value = "{3096822a-54c3-4ae5-be72-ea7972535892}"/>
-				<PortName value = "2"/>
-				<PortType value = "0"/>
-			</InPort>
-			<OutPort>
-				<UUID value = "{46add94c-a063-422c-b32d-1b3b185f23d2}"/>
-				<PortName value = "Data"/>
-				<PortType value = "0"/>
-			</OutPort>
-		</Link>
-		<Link>
-			<BackLink value = "0"/>
-			<InPort>
-				<UUID value = "{3096822a-54c3-4ae5-be72-ea7972535892}"/>
-				<PortName value = "3"/>
-				<PortType value = "0"/>
-			</InPort>
-			<OutPort>
-				<UUID value = "{6609cc69-4fdd-4ef8-9a1c-ab536a5c0110}"/>
-				<PortName value = "Data"/>
-				<PortType value = "0"/>
-			</OutPort>
-		</Link>
-		<Link>
-			<BackLink value = "0"/>
-			<InPort>
-				<UUID value = "{3096822a-54c3-4ae5-be72-ea7972535892}"/>
+				<UUID value = "{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
 				<PortName value = "1"/>
 				<PortType value = "0"/>
 			</InPort>
 			<OutPort>
-				<UUID value = "{8ab47a18-b58b-4da2-b48e-d2346fd2fbb5}"/>
+				<UUID value = "{4a324808-d506-4c7d-99b9-5ce2d59e9c88}"/>
 				<PortName value = "Vec"/>
 				<PortType value = "0"/>
 			</OutPort>
@@ -232,12 +180,64 @@
 		<Link>
 			<BackLink value = "0"/>
 			<InPort>
-				<UUID value = "{3096822a-54c3-4ae5-be72-ea7972535892}"/>
+				<UUID value = "{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
 				<PortName value = "4"/>
 				<PortType value = "0"/>
 			</InPort>
 			<OutPort>
-				<UUID value = "{911a4248-f49f-4d8b-9aeb-1bc2dc402e3a}"/>
+				<UUID value = "{703c06bc-6c1a-4f74-9c0b-a1fa293384ba}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{401b7250-fe12-4bd0-b1f3-2b4b452e35d1}"/>
+				<PortName value = "City"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
+				<PortName value = "Combined"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{f9045b49-a93f-42c4-b171-8e1468985d82}"/>
+				<PortName value = "City"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{99ff1860-758d-4853-a4f4-a291099568b5}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
+				<PortName value = "3"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{c67abf26-f8a5-4611-90e2-6d66b743e197}"/>
+				<PortName value = "Data"/>
+				<PortType value = "0"/>
+			</OutPort>
+		</Link>
+		<Link>
+			<BackLink value = "0"/>
+			<InPort>
+				<UUID value = "{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
+				<PortName value = "2"/>
+				<PortType value = "0"/>
+			</InPort>
+			<OutPort>
+				<UUID value = "{f38fd380-a61d-4a2f-842f-d7760f6ef312}"/>
 				<PortName value = "Data"/>
 				<PortType value = "0"/>
 			</OutPort>
@@ -247,51 +247,51 @@
 <DynaMindGUI>
 	<GUI_Nodes>
 		<GUI_Node>
-			<GUI_UUID value="{8ab47a18-b58b-4da2-b48e-d2346fd2fbb5}"/>
-			<GUI_PosX value="4"/>
-			<GUI_PosY value="0"/>
-			<GUI_Minimized value="0"/>
-		</GUI_Node>
-		<GUI_Node>
-			<GUI_UUID value="{2463a099-69e6-4361-9a19-a5ba1a77a733}"/>
-			<GUI_PosX value="1005"/>
-			<GUI_PosY value="205"/>
-			<GUI_Minimized value="0"/>
-		</GUI_Node>
-		<GUI_Node>
-			<GUI_UUID value="{06722589-a816-4edf-99a6-f91b17adc533}"/>
+			<GUI_UUID value="{401b7250-fe12-4bd0-b1f3-2b4b452e35d1}"/>
 			<GUI_PosX value="674"/>
 			<GUI_PosY value="200"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
-			<GUI_UUID value="{6609cc69-4fdd-4ef8-9a1c-ab536a5c0110}"/>
-			<GUI_PosX value="7"/>
-			<GUI_PosY value="250"/>
+			<GUI_UUID value="{99ff1860-758d-4853-a4f4-a291099568b5}"/>
+			<GUI_PosX value="1005"/>
+			<GUI_PosY value="205"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
-			<GUI_UUID value="{46add94c-a063-422c-b32d-1b3b185f23d2}"/>
-			<GUI_PosX value="5"/>
-			<GUI_PosY value="125"/>
-			<GUI_Minimized value="0"/>
-		</GUI_Node>
-		<GUI_Node>
-			<GUI_UUID value="{3096822a-54c3-4ae5-be72-ea7972535892}"/>
+			<GUI_UUID value="{791dbcea-09a8-469e-a6f0-ceff33a50b26}"/>
 			<GUI_PosX value="347"/>
 			<GUI_PosY value="111"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
-			<GUI_UUID value="{911a4248-f49f-4d8b-9aeb-1bc2dc402e3a}"/>
-			<GUI_PosX value="0"/>
-			<GUI_PosY value="394"/>
+			<GUI_UUID value="{f38fd380-a61d-4a2f-842f-d7760f6ef312}"/>
+			<GUI_PosX value="5"/>
+			<GUI_PosY value="125"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 		<GUI_Node>
-			<GUI_UUID value="{7c92283f-f8a8-4d29-a160-872f142e5e3b}"/>
+			<GUI_UUID value="{c67abf26-f8a5-4611-90e2-6d66b743e197}"/>
+			<GUI_PosX value="7"/>
+			<GUI_PosY value="250"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{f9045b49-a93f-42c4-b171-8e1468985d82}"/>
 			<GUI_PosX value="1180"/>
 			<GUI_PosY value="390"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{4a324808-d506-4c7d-99b9-5ce2d59e9c88}"/>
+			<GUI_PosX value="4"/>
+			<GUI_PosY value="0"/>
+			<GUI_Minimized value="0"/>
+		</GUI_Node>
+		<GUI_Node>
+			<GUI_UUID value="{703c06bc-6c1a-4f74-9c0b-a1fa293384ba}"/>
+			<GUI_PosX value="0"/>
+			<GUI_PosY value="394"/>
 			<GUI_Minimized value="0"/>
 		</GUI_Node>
 	</GUI_Nodes>

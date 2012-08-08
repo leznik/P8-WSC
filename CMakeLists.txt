@@ -1,32 +1,48 @@
-cmake_minimum_required(VERSION 2.8)
-project(P8-WSC)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(cityblocks)
+
+FIND_PATH(DYNAMINDDEV DynaMindDevCmake.txt
+            PATHS   $ENV{DYNAMIND_DIR}/include
+            PATH_SUFFIXES dynamindcore/CMake)
+
+IF(DYNAMIND_INCLUDE_DIR)
+        MESSAGE("Compiled from toolbox")
+        MESSAGE("DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR}")
+        SET (DYNAMIND_CORE_LIBRARY dynamindcore)
+        SET (DYNAMIND_TOOLBOX_LIBRARY dynamindtoolbox)
+        MESSAGE("${DYNAMIND_CORE_LIBRARY}")
+ELSE()
+        MESSAGE("Compiled from stand alone")
+        FIND_PATH(DYNAMINDDEV DynaMindDevCmake.txt
+        PATHS $ENV{DYNAMIND_DIR}/include
+        PATH_SUFFIXES dynamindcore/CMake)
+
+        IF(DYNAMINDDEV)
+                INCLUDE(${DYNAMINDDEV}/DynaMindDevCmake.txt)
+        ELSE()
+                MESSAGE(FATAL_ERROR "Could not find dynamind. Maybe not installed ?")
+        ENDIF()
+
+ENDIF()
+
+FIND_PACKAGE(Qt4 COMPONENTS QtCore QtGui REQUIRED)
 
 
-find_package(Git REQUIRED)
+INCLUDE(${QT_USE_FILE})
+INCLUDE_DIRECTORIES( ${DYNAMIND_INCLUDE_DIR})
 
-set(TOOLBOX DynaMind DynaMind-Gui DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
+IF(CMAKE_BUILD_TYPE STREQUAL Debug)
+        MESSAGE(STATUS "Build Type = Debug")
+        ADD_DEFINITIONS(-DDEBUG)
+ELSE()
+        MESSAGE(STATUS "Build Type = Release")
+ENDIF()
 
-
-foreach (tool ${TOOLBOX})
-	if (EXISTS ${CMAKE_SOURCE_DIR}/${tool}/src)
-	    message(STATUS "${tool} submodule already exists")
-	else (EXISTS ${CMAKE_SOURCE_DIR}/${tool}/src)
-	    message(STATUS "preparing ${tool} submodule")
-	    execute_process(COMMAND ${GIT_EXECUTABLE} submodule init
-		            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
-	    execute_process(COMMAND ${GIT_EXECUTABLE} submodule update
-		            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
-	endif (EXISTS ${CMAKE_SOURCE_DIR}/${tool}/src)
-
-endforeach(${tool}) 
-
-SET(DYNAMIND_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/DynaMind/src/core) 
-SET(DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/DynaMind/src/DMToolboxes) 
-SET(DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/DynaMind/src/python-swig) 
-SET(DYNAMIND_TOOLBOX_BUILD_DIR ${P8-WSC_BINARY_DIR}/output)
-
-file(MAKE_DIRECTORY ${P8-WSC_BINARY_DIR}/output)
-foreach (tool ${TOOLBOX})
-	add_subdirectory(${tool})
-endforeach(${tool}) 
-
+IF(DYNAMIND_TOOLBOX_BUILD_DIR)
+    SET(LIBRARY_OUTPUT_PATH ${DYNAMIND_TOOLBOX_BUILD_DIR}/Modules)
+    SET(EXECUTABLE_OUTPUT_PATH ${DYNAMIND_TOOLBOX_BUILD_DIR}/Modules)
+ELSE()
+    SET(LIBRARY_OUTPUT_PATH ${cityblocks_BINARY_DIR})
+    SET(EXECUTABLE_OUTPUT_PATH ${cityblocks_BINARY_DIR})
+ENDIF()
+ADD_SUBDIRECTORY(src)
