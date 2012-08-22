@@ -13,3 +13,6 @@
 [submodule "DynaMind-CityBlocks"]
 	path = DynaMind-CityBlocks
 	url = git@github.com:christianurich/DynaMind-CityBlocks.git
+[submodule "UrbanBEATS"]
+	path = UrbanBEATS
+	url = git@github.com:petermbach/UrbanBEATS.git
