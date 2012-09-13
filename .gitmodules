@@ -13,3 +13,6 @@
 [submodule "UrbanBEATS"]
 	path = UrbanBEATS
 	url = git@github.com:petermbach/UrbanBEATS.git
+[submodule "P8-WSC-GUI"]
+	path = P8-WSC-GUI
+	url = git@github.com:iut-ibk/P8-WSC-GUI.git

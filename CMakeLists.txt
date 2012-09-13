@@ -4,7 +4,7 @@ project(P8-WSC)
 
 find_package(Git REQUIRED)
 
-set(TOOLBOX DynaMind DynaMind-Gui DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
+set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
 
 
 foreach (tool ${TOOLBOX})
