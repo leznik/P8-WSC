@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(P8-WSC)
 
+ADD_DEFINITIONS(-DDYNAMIND_VERSION_CORE="0.2.0")
 
 find_package(Git REQUIRED)
 
