@@ -9,7 +9,7 @@
 	url = git@github.com:iut-ibk/P8Modules.git
 [submodule "DynaMind-CityBlocks"]
 	path = DynaMind-CityBlocks
-	url = git@github.com:christianurich/DynaMind-CityBlocks.git
+	url = git@github.com:iut-ibk/DynaMind-CityBlocks.git
 [submodule "UrbanBEATS"]
 	path = UrbanBEATS
 	url = git@github.com:petermbach/UrbanBEATS.git
