@@ -32,6 +32,7 @@ OPTION(TESTNEW "Test for new dynamind kernel" OFF)
 
 if(TESTNEW)
     SET(DYNAMIND_EXTENSIONS_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/DynaMind-Extensions/src)
+    SET(DYNAMIND_EXTENSIONS_LIBRARY dynamind-extensions)
     ADD_SUBDIRECTORY(DynaMind-Extensions)
 endif(TESTNEW)
 
