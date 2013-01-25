@@ -16,3 +16,6 @@
 [submodule "P8-WSC-GUI"]
 	path = P8-WSC-GUI
 	url = git@github.com:iut-ibk/P8-WSC-GUI.git
+[submodule "DynaMind-Extensions"]
+	path = DynaMind-Extensions
+	url = git@github.com:iut-ibk/DynaMind-Extensions.git

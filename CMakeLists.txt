@@ -27,7 +27,18 @@ SET(DYNAMIND_INCLUDE_DIR ${DYNAMIND_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/DynaMind/sr
 SET(DYNAMIND_TOOLBOX_BUILD_DIR ${P8-WSC_BINARY_DIR}/output)
 
 file(MAKE_DIRECTORY ${P8-WSC_BINARY_DIR}/output)
+
+OPTION(TESTNEW "Test for new dynamind kernel" OFF)
+
+if(TESTNEW)
+    SET(DYNAMIND_EXTENSIONS_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/DynaMind-Extensions/src)
+    ADD_SUBDIRECTORY(DynaMind-Extensions)
+endif(TESTNEW)
+
+
+
 foreach (tool ${TOOLBOX})
 	add_subdirectory(${tool})
-endforeach(${tool}) 
+endforeach(${tool})
+
 
