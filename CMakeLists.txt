@@ -33,7 +33,7 @@ file(MAKE_DIRECTORY ${P8-WSC_BINARY_DIR}/output)
 
 
 ########TMPSECTION########
-OPTION(TESTNEW "Test for new dynamind kernel" OFF)
+OPTION(TESTNEW "Test for new dynamind kernel" ON)
 
 if(TESTNEW)
     SET(DYNAMIND_EXTENSIONS_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/DynaMind-Extensions/src)
