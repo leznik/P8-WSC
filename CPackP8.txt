@@ -70,9 +70,9 @@ MESSAGE(STATUS "running installer")
      INSTALL(FILES ${DLLS} DESTINATION .)
 
      FIND_PACKAGE(Qt4 REQUIRED QtSql)
-     MESSAGE(STATUS "QT PLUGINS DIR: " ${QT_PLUGINS_DIR})
-     INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/qtconf/qt.conf" DESTINATION .)
-     INSTALL(FILES ${QT_PLUGINS_DIR}/sqldrivers/qsqlite4.dll DESTINATION plugins/sqldrivers)
+     #MESSAGE(STATUS "QT PLUGINS DIR: " ${QT_PLUGINS_DIR})
+     #INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/qtconf/qt.conf" DESTINATION .)
+     #INSTALL(FILES ${QT_PLUGINS_DIR}/sqldrivers/qsqlite4.dll DESTINATION plugins/sqldrivers)
 
      if(WITH_GUI)
         set(CPACK_PACKAGE_EXECUTABLES "dynamind-gui;DynaMind-Modellbuilder")
