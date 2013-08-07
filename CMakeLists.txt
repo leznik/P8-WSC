@@ -5,6 +5,8 @@ ADD_DEFINITIONS(-DDYNAMIND_VERSION_CORE="0.2.0")
 
 find_package(Git REQUIRED)
 
+OPTION(WITH_INSTALLER "create a windows installer (NSIS)" OFF)
+
 #set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
 set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks DynaMind-Extensions)
 
@@ -37,3 +39,7 @@ foreach (tool ${TOOLBOX})
 endforeach(${tool})
 
 
+if(WITH_INSTALLER)
+    INCLUDE(CPackP8.txt)
+    MESSAGE(STATUS "Installer enabled")
+endif(WITH_INSTALLER)
