@@ -4,10 +4,10 @@ INCLUDE(InstallRequiredSystemLibraries)
 #as workaraound this dll is included in the python package for dynamind (as soon as this bug is fixed the durty workaround will be removed)
 
 
-SET(CPACK_NSIS_DISPLAY_NAME "DynaMind-P8")
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "DynaMind-P8")
-SET(CPACK_PACKAGE_NAME "DynaMind-P8")
-SET(CPACK_PACKAGE_VENDOR "Hydro IT")
+SET(CPACK_NSIS_DISPLAY_NAME "P8-WSC")
+SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "P8-WSC")
+SET(CPACK_PACKAGE_NAME "P8-WSC")
+SET(CPACK_PACKAGE_VENDOR "hydro-IT")
 SET(CPACK_PACKAGE_VERSION_MAJOR "0")
 SET(CPACK_PACKAGE_VERSION_MINOR "0")
 SET(CPACK_PACKAGE_VERSION_PATCH "0")
@@ -29,7 +29,7 @@ MESSAGE(STATUS "running installer")
     SET(CPACK_NSIS_DISPLAY_NAME "DynaMind-P8")
 #   SET(CPACK_NSIS_HELP_LINK "http:\\\\\\\\www.dynamind-toolbox.org")
 #   SET(CPACK_NSIS_URL_INFO_ABOUT "http:\\\\\\\\www.dynamind-toolbox.org")
-#   SET(CPACK_NSIS_CONTACT "christian.urich@gmail.com, michael.mair@uibk.ac.at")
+    SET(CPACK_NSIS_CONTACT "kinzel@hydro-it.org")
     SET(CPACK_NSIS_EXECUTABLES_DIRECTORY .)
 
     SET(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "
