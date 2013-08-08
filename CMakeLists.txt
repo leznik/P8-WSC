@@ -8,7 +8,7 @@ find_package(Git REQUIRED)
 OPTION(WITH_INSTALLER "create a windows installer (NSIS)" OFF)
 
 #set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks)
-set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks DynaMind-Extensions)
+set(TOOLBOX DynaMind P8-WSC-GUI DynaMind-BasicModules P8Modules DynaMind-CityBlocks DynaMind-Extensions UrbanBEATS)
 
 
 foreach (tool ${TOOLBOX})
